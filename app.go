@@ -2,7 +2,6 @@ package main
 
 import (
 	"database/sql"
-	"fmt"
 	"log"
 
 	"github.com/gorilla/mux"
@@ -14,8 +13,8 @@ type App struct {
 	DB     *sql.DB
 }
 
-func (a *App) Initialazer(user, password, dbname string) {
-	connectionString := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", user, password, dbname)
+func (a *App) Initialazer() {
+	connectionString := "user=postgres password=123 dbname=postgres port=5444 sslmode=disable"
 	var err error
 	a.DB, err = sql.Open("postgres", connectionString)
 	if err != nil {
