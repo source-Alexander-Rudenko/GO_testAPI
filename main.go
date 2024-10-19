@@ -2,6 +2,6 @@ package main
 
 func main() {
 	a := App{}
-	a.Initialazer()
+	a.Initialaze()
 	a.Run(":8010")
 }
