@@ -15,7 +15,7 @@ import (
 var a App
 
 func TestMain(m *testing.M) {
-	a.Initialaze()
+	a.Initialize()
 
 	ensureTableExists()
 	code := m.Run()

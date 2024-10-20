@@ -16,7 +16,7 @@ type App struct {
 	DB     *sql.DB
 }
 
-func (a *App) Initialaze() {
+func (a *App) Initialize() {
 	connectionString := "user=postgres password=123 dbname=postgres port=5444 sslmode=disable"
 	var err error
 	a.DB, err = sql.Open("postgres", connectionString)
